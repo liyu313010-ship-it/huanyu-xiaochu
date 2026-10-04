@@ -1,0 +1,56 @@
+.page-header { padding: 48rpx 32rpx 24rpx; }
+.page-title { font-size: 44rpx; font-weight: bold; color: #3D2B1F; display: block; }
+.page-sub { font-size: 26rpx; color: #8B6F5E; display: block; margin-top: 8rpx; }
+.bg-paw-wrap { position: fixed; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; z-index: 0; }
+.bg-paw { position: absolute; width: 100rpx; height: 112rpx; opacity: 0.08; }
+.bg-dog { opacity: 0.1; }
+.bp1 { top: 200rpx; right: 40rpx; transform: rotate(20deg); }
+.bp2 { top: 500rpx; left: 20rpx; transform: rotate(-15deg); }
+.bp3 { bottom: 300rpx; right: 80rpx; transform: rotate(45deg); }
+.result-area { padding: 40rpx 32rpx; position: relative; z-index: 1; }
+.result-card {
+  background: #FFFFFF;
+  border-radius: 32rpx;
+  padding: 48rpx 32rpx;
+  min-height: 320rpx;
+  box-shadow: 0 8rpx 40rpx rgba(61,43,31,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  transition: transform 0.18s;
+}
+.result-card.rolling { transform: scale(0.97); }
+.result-emoji { font-size: 96rpx; display: block; }
+.result-name { font-size: 48rpx; font-weight: bold; color: #3D2B1F; display: block; margin-top: 16rpx; }
+.result-label { display: inline-block; margin-top: 16rpx; padding: 8rpx 24rpx; border-radius: 12rpx; font-size: 24rpx; }
+.result-desc { font-size: 26rpx; color: #8B6F5E; display: block; margin-top: 20rpx; line-height: 1.6; }
+.result-placeholder { text-align: center; }
+.placeholder-emoji { font-size: 80rpx; display: block; }
+.placeholder-text { font-size: 32rpx; font-weight: bold; color: #3D2B1F; display: block; margin-top: 16rpx; }
+.placeholder-sub { font-size: 26rpx; color: #8B6F5E; display: block; margin-top: 8rpx; }
+.random-btn-wrap { padding: 0 32rpx; position: relative; z-index: 1; }
+.random-btn {
+  background: #E8956D;
+  color: #FFFFFF;
+  border-radius: 48rpx;
+  padding: 32rpx 0;
+  text-align: center;
+  font-size: 34rpx;
+  font-weight: bold;
+  box-shadow: 0 6rpx 24rpx rgba(232,149,109,0.40);
+  transition: opacity 0.2s;
+}
+.random-btn.disabled { opacity: 0.6; }
+.again-btn { text-align: center; padding: 28rpx 0; font-size: 28rpx; color: #8B6F5E; }
+.add-order-btn {
+  margin-top: 8rpx;
+  border: 2rpx solid #E8956D;
+  color: #E8956D;
+  border-radius: 48rpx;
+  padding: 24rpx 0;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: bold;
+}

@@ -1,0 +1,58 @@
+.page-header { padding: 48rpx 32rpx 24rpx; }
+.page-title { font-size: 44rpx; font-weight: bold; color: #3D2B1F; display: block; }
+.page-sub { font-size: 26rpx; color: #8B6F5E; display: block; margin-top: 8rpx; }
+.empty-state { padding: 110rpx 32rpx 40rpx; text-align: center; }
+.dog-placeholder { font-size: 80rpx; text-align: center; opacity: 0.6; }
+.empty-dog { width: 240rpx; height: 200rpx; display: block; margin: 0 auto; }
+.empty-title { display: block; margin-top: 24rpx; font-size: 34rpx; font-weight: bold; color: #3D2B1F; }
+.empty-sub { display: block; margin-top: 12rpx; font-size: 26rpx; color: #8B6F5E; }
+.go-menu-btn {
+  margin: 40rpx auto 0;
+  width: 260rpx;
+  background: #E8956D;
+  color: #FFFFFF;
+  border-radius: 48rpx;
+  padding: 24rpx 0;
+  font-size: 30rpx;
+  font-weight: bold;
+  box-shadow: 0 6rpx 20rpx rgba(232,149,109,0.35);
+}
+.order-list { padding: 0 32rpx; }
+.order-card {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 24rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 4rpx 20rpx rgba(61,43,31,0.08);
+}
+.order-emoji { font-size: 56rpx; width: 72rpx; margin-right: 20rpx; flex-shrink: 0; }
+.order-info { flex: 1; min-width: 0; }
+.order-name-row { display: flex; align-items: center; margin-bottom: 8rpx; }
+.order-name { font-size: 32rpx; font-weight: bold; color: #3D2B1F; margin-right: 12rpx; }
+.order-label { font-size: 22rpx; padding: 5rpx 14rpx; border-radius: 10rpx; flex-shrink: 0; }
+.order-desc { font-size: 26rpx; color: #8B6F5E; line-height: 1.5; }
+.remove-btn {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  background: #F5EDE8;
+  color: #8B6F5E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  flex-shrink: 0;
+  margin-left: 16rpx;
+}
+.order-footer { padding: 16rpx 32rpx 40rpx; text-align: center; }
+.order-summary { display: block; font-size: 28rpx; color: #3D2B1F; font-weight: bold; margin-bottom: 32rpx; }
+.clear-btn {
+  display: inline-block;
+  padding: 20rpx 64rpx;
+  border: 2rpx solid #E0CFC8;
+  border-radius: 48rpx;
+  color: #8B6F5E;
+  font-size: 28rpx;
+}

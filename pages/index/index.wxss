@@ -1,0 +1,322 @@
+.order-page {
+  min-height: 100vh;
+  background: #FFFFFF;
+  padding-bottom: 238rpx;
+}
+.top-bar {
+  height: 104rpx;
+  padding: 16rpx 28rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #F1EEF5;
+  background: #FFFFFF;
+}
+.mode-tabs { display: flex; align-items: center; height: 88rpx; }
+.mode-tab {
+  height: 88rpx;
+  line-height: 76rpx;
+  margin-right: 34rpx;
+  color: #89818F;
+  font-size: 30rpx;
+  position: relative;
+}
+.mode-tab.active { color: #17121B; font-weight: bold; }
+.mode-tab.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6rpx;
+  border-radius: 8rpx;
+  background: #8172A8;
+}
+.top-actions { display: flex; align-items: center; }
+.recipe-btn {
+  height: 56rpx;
+  line-height: 52rpx;
+  padding: 0 24rpx;
+  border: 3rpx solid #8A8199;
+  border-radius: 8rpx;
+  color: #746B84;
+  font-size: 24rpx;
+  margin-right: 16rpx;
+}
+.search-pill {
+  height: 58rpx;
+  line-height: 58rpx;
+  padding: 0 28rpx;
+  border-radius: 32rpx;
+  background: #F3F2F4;
+  color: #736D7A;
+  font-size: 26rpx;
+}
+.user-strip {
+  height: 92rpx;
+  padding: 14rpx 28rpx;
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+}
+.avatar-btn {
+  width: 58rpx;
+  height: 58rpx;
+  padding: 0;
+  margin: 0 16rpx 0 0;
+  border-radius: 50%;
+  background: #F5F1FA;
+  border: 2rpx solid #DED7EA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.avatar-btn::after { border: none; }
+.avatar-img { width: 58rpx; height: 58rpx; border-radius: 50%; }
+.avatar-placeholder { font-size: 22rpx; color: #8172A8; }
+.nickname-input {
+  flex: 1;
+  height: 58rpx;
+  font-size: 26rpx;
+  color: #30273A;
+}
+.selected-tip {
+  color: #8172A8;
+  font-size: 24rpx;
+  padding-left: 16rpx;
+}
+.menu-shell {
+  position: fixed;
+  top: 196rpx;
+  left: 0;
+  right: 0;
+  bottom: 226rpx;
+  display: flex;
+  background: #FFFFFF;
+}
+.side-scroll {
+  width: 188rpx;
+  height: 100%;
+  background: #F8F8F9;
+}
+.side-item {
+  min-height: 104rpx;
+  padding: 20rpx 12rpx 18rpx 22rpx;
+  color: #68616D;
+  font-size: 28rpx;
+  position: relative;
+  background: #F8F8F9;
+}
+.side-item.active {
+  background: #FFFFFF;
+  color: #2D2634;
+  font-weight: bold;
+}
+.side-item.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 30rpx;
+  width: 6rpx;
+  height: 48rpx;
+  border-radius: 4rpx;
+  background: #8172A8;
+}
+.side-required {
+  position: absolute;
+  right: 8rpx;
+  top: 8rpx;
+  padding: 2rpx 10rpx;
+  border-radius: 16rpx;
+  background: #8172A8;
+  color: #FFFFFF;
+  font-size: 18rpx;
+  font-weight: normal;
+}
+.side-name { display: inline; line-height: 40rpx; }
+.side-icon { margin-left: 6rpx; }
+.side-manage {
+  padding: 28rpx 16rpx 40rpx;
+  color: #817A91;
+  font-size: 26rpx;
+  text-align: center;
+}
+.dish-scroll {
+  flex: 1;
+  height: 100%;
+  background: #FFFFFF;
+}
+.section-title-row {
+  padding: 20rpx 24rpx 4rpx;
+  display: flex;
+  align-items: baseline;
+}
+.section-title {
+  font-size: 34rpx;
+  color: #151219;
+  font-weight: bold;
+}
+.section-count {
+  margin-left: 8rpx;
+  font-size: 28rpx;
+  color: #151219;
+}
+.menu-dish {
+  min-height: 172rpx;
+  padding: 22rpx 24rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.dish-art {
+  width: 134rpx;
+  height: 134rpx;
+  border-radius: 18rpx;
+  background: #FFF4E8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24rpx;
+  flex-shrink: 0;
+}
+.dish-emoji { font-size: 70rpx; }
+.dish-main { flex: 1; min-width: 0; padding-right: 54rpx; }
+.dish-name {
+  display: block;
+  font-size: 32rpx;
+  color: #111111;
+  font-weight: bold;
+  line-height: 42rpx;
+}
+.star-row {
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+}
+.stars {
+  color: #F8C64E;
+  font-size: 26rpx;
+  letter-spacing: 0;
+}
+.score {
+  color: #3D3842;
+  font-size: 26rpx;
+  margin-left: 10rpx;
+}
+.sales {
+  display: block;
+  margin-top: 8rpx;
+  color: #9D98A2;
+  font-size: 25rpx;
+}
+.dish-desc {
+  display: block;
+  margin-top: 6rpx;
+  color: #B0A9B8;
+  font-size: 22rpx;
+  line-height: 30rpx;
+}
+.add-circle {
+  position: absolute;
+  right: 24rpx;
+  top: 66rpx;
+  width: 48rpx;
+  height: 48rpx;
+  line-height: 45rpx;
+  text-align: center;
+  border-radius: 50%;
+  background: #8172A8;
+  color: #FFFFFF;
+  font-size: 42rpx;
+  font-weight: bold;
+  box-shadow: 0 4rpx 10rpx rgba(70,56,104,0.20);
+}
+.add-circle.selected {
+  background: #E8956D;
+  font-size: 30rpx;
+  line-height: 48rpx;
+}
+.list-empty {
+  padding: 120rpx 20rpx;
+  text-align: center;
+  color: #8B6F5E;
+  font-size: 28rpx;
+}
+.list-empty-sub {
+  display: block;
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  color: #B0A9B8;
+}
+.dog-placeholder { font-size: 80rpx; text-align: center; opacity: 0.6; }
+.empty-dog { width: 180rpx; height: 160rpx; display: block; margin: 0 auto 20rpx; }
+.cart-bar {
+  position: fixed;
+  left: 22rpx;
+  right: 22rpx;
+  bottom: 116rpx;
+  height: 92rpx;
+  padding: 10rpx 12rpx 10rpx 24rpx;
+  border-radius: 52rpx;
+  background: #FFFFFF;
+  box-shadow: 0 4rpx 24rpx rgba(28,24,32,0.12);
+  display: flex;
+  align-items: center;
+  z-index: 80;
+}
+.cart-icon-wrap {
+  width: 84rpx;
+  height: 70rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.cart-icon {
+  color: #8172A8;
+  font-size: 46rpx;
+}
+.cart-badge {
+  position: absolute;
+  top: 0;
+  right: 14rpx;
+  min-width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+  border-radius: 16rpx;
+  background: #E8956D;
+  color: #FFFFFF;
+  font-size: 18rpx;
+}
+.random-link {
+  flex: 1;
+  color: #8172A8;
+  font-size: 27rpx;
+  text-align: center;
+  text-decoration: underline;
+}
+.invite-btn {
+  height: 68rpx;
+  line-height: 64rpx;
+  padding: 0 32rpx;
+  border-radius: 38rpx;
+  border: 3rpx solid #817A91;
+  color: #8172A8;
+  font-size: 28rpx;
+  margin-right: 12rpx;
+}
+.submit-btn {
+  height: 68rpx;
+  line-height: 68rpx;
+  padding: 0 36rpx;
+  border-radius: 38rpx;
+  background: #F1F0F2;
+  color: #C8C4CC;
+  font-size: 28rpx;
+}
+.submit-btn.active {
+  background: #8172A8;
+  color: #FFFFFF;
+}

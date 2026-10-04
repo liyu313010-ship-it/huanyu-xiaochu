@@ -1,0 +1,37 @@
+<view class="page-container">
+  <view class="page-header">
+    <text class="page-title">管理菜单 ⚙️</text>
+    <text class="page-sub">添加或删除你家的菜品</text>
+  </view>
+
+  <view class="add-section">
+    <text class="section-title">添加新菜品</text>
+    <view class="field-label">选个图标</view>
+    <scroll-view class="emoji-scroll" scroll-x="true" show-scrollbar="false">
+      <view class="emoji-list">
+        <view class="emoji-item {{selectedEmoji === item ? 'active' : ''}}" wx:for="{{emojiList}}" wx:key="index" bindtap="selectEmoji" data-emoji="{{item}}">{{item}}</view>
+      </view>
+    </scroll-view>
+    <view class="field-label">菜品名称</view>
+    <input class="input-field" placeholder="例如：番茄炒蛋" placeholder-style="color:#C4A898" value="{{newName}}" bindinput="onNameInput" maxlength="12"/>
+    <view class="field-label">简单描述</view>
+    <input class="input-field" placeholder="例如：酸甜适口，下饭神器" placeholder-style="color:#C4A898" value="{{newDesc}}" bindinput="onDescInput" maxlength="24"/>
+    <view class="field-label">分类</view>
+    <view class="cat-list">
+      <view class="cat-tag {{selectedCategory === item ? 'active' : ''}}" wx:for="{{categoryOptions}}" wx:key="index" bindtap="selectCategory" data-category="{{item}}">{{item}}</view>
+    </view>
+    <view class="add-btn" bindtap="addDish">+ 添加这道菜</view>
+  </view>
+
+  <view class="list-section">
+    <text class="section-title">已有菜品（{{allDishes.length}} 道）</text>
+    <view class="manage-card" wx:for="{{allDishes}}" wx:key="id">
+      <view class="manage-emoji">{{item.emoji}}</view>
+      <view class="manage-info">
+        <text class="manage-name">{{item.name}}</text>
+        <view class="manage-label" style="background:{{item.labelBg}};color:{{item.labelColor}}">{{item.category}}</view>
+      </view>
+      <view class="delete-btn" bindtap="deleteDish" data-id="{{item.id}}">删除</view>
+    </view>
+  </view>
+</view>

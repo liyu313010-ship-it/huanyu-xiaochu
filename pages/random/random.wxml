@@ -1,0 +1,40 @@
+<view class="page-container">
+  <view class="page-header">
+    <text class="page-title">选不了？让我帮你 🎲</text>
+    <text class="page-sub">点下面的按钮，随机给你选一道</text>
+  </view>
+  <view class="bg-paw-wrap">
+    <!-- [TODO: 随机选菜页背景装饰] 如SVG不可用，保留空白背景即可 -->
+    <image class="bg-dog bg-paw bp1" src="{{pawSrc}}" wx:if="{{pawSrc}}" mode="aspectFit"/>
+    <image class="bg-paw bp2" src="{{pawSrc}}" wx:if="{{pawSrc}}" mode="aspectFit"/>
+    <image class="bg-paw bp3" src="{{pawSrc}}" wx:if="{{pawSrc}}" mode="aspectFit"/>
+  </view>
+  <view class="result-area">
+    <view class="result-card {{isRolling ? 'rolling' : ''}}">
+      <view wx:if="{{hasResult}}">
+        <text class="result-emoji">{{result.emoji}}</text>
+        <text class="result-name">{{result.name}}</text>
+        <view class="result-label" style="background:{{result.labelBg}};color:{{result.labelColor}}">{{result.category}}</view>
+        <text class="result-desc">{{result.desc}}</text>
+      </view>
+      <view class="result-placeholder" wx:else>
+        <!-- [TODO: 线条小狗插画] 随机页结果卡片占位小狗 -->
+        <text class="placeholder-emoji">🎲</text>
+        <text class="placeholder-text">还没开始选哦</text>
+        <text class="placeholder-sub">点下面按钮帮你决定！</text>
+      </view>
+    </view>
+  </view>
+  <view class="random-btn-wrap">
+    <view class="random-btn {{isRolling ? 'disabled' : ''}}" bindtap="rollDish">
+      <text>{{isRolling ? '选菜中...' : '今天吃什么？'}}</text>
+    </view>
+    <view class="again-btn" wx:if="{{hasResult && !isRolling}}" bindtap="rollDish">换一道 🔄</view>
+    <view class="add-order-btn" wx:if="{{hasResult && !isRolling}}" bindtap="addToOrder">{{isAdded ? '✓ 已加入今日菜单' : '加入今日菜单 +'}}</view>
+  </view>
+  <view class="paw-decoration">
+    <image class="paw-img" src="{{pawSrc}}" wx:if="{{pawSrc}}"/>
+    <image class="paw-img paw-img-middle" src="{{pawSrc}}" wx:if="{{pawSrc}}"/>
+    <image class="paw-img paw-img-last" src="{{pawSrc}}" wx:if="{{pawSrc}}"/>
+  </view>
+</view>

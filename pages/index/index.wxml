@@ -1,0 +1,92 @@
+<view class="order-page">
+  <view class="top-bar">
+    <view class="mode-tabs">
+      <view class="mode-tab active">点单</view>
+      <view class="mode-tab" bindtap="goManage">修改</view>
+    </view>
+    <view class="top-actions">
+      <view class="recipe-btn" bindtap="goManage">添加菜谱</view>
+      <view class="search-pill">⌕ 搜索</view>
+    </view>
+  </view>
+
+  <view class="user-strip">
+    <button class="avatar-btn" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+      <image class="avatar-img" src="{{userInfo.avatarUrl}}" mode="aspectFill" wx:if="{{userInfo.avatarUrl}}"/>
+      <text class="avatar-placeholder" wx:else>我</text>
+    </button>
+    <input
+      class="nickname-input"
+      type="nickname"
+      placeholder="填写微信昵称"
+      placeholder-style="color:#B8AFC6"
+      value="{{userInfo.nickName}}"
+      bindinput="onNicknameInput"
+      bindblur="saveUserInfo"
+    />
+    <text class="selected-tip">已选 {{selectedIds.length}} 道</text>
+  </view>
+
+  <view class="menu-shell">
+    <scroll-view class="side-scroll" scroll-y="true" show-scrollbar="false">
+      <view
+        wx:for="{{categoryItems}}"
+        wx:key="name"
+        class="side-item {{item.active ? 'active' : ''}}"
+        bindtap="onCategoryTap"
+        data-category="{{item.name}}"
+      >
+        <view class="side-required" wx:if="{{item.required}}">必选</view>
+        <text class="side-name">{{item.title}}</text>
+        <text class="side-icon">{{item.icon}}</text>
+      </view>
+      <view class="side-manage" bindtap="goManage">⚙ 分类管理</view>
+    </scroll-view>
+
+    <scroll-view class="dish-scroll" scroll-y="true" show-scrollbar="false">
+      <view class="section-title-row">
+        <text class="section-title">{{currentCategoryTitle}}</text>
+        <text class="section-count">({{filteredDishes.length}})</text>
+      </view>
+
+      <view
+        class="menu-dish"
+        wx:for="{{filteredDishes}}"
+        wx:key="id"
+      >
+        <view class="dish-art">
+          <text class="dish-emoji">{{item.emoji}}</text>
+        </view>
+        <view class="dish-main">
+          <text class="dish-name">{{item.name}}</text>
+          <view class="star-row">
+            <text class="stars">{{item.stars}}</text>
+            <text class="score">{{item.score}}</text>
+          </view>
+          <text class="sales">月销 0</text>
+          <text class="dish-desc">{{item.desc}}</text>
+        </view>
+        <view class="add-circle {{item.selected ? 'selected' : ''}}" catchtap="onDishTap" data-id="{{item.id}}">
+          {{item.selected ? '✓' : '+'}}
+        </view>
+      </view>
+
+      <view class="list-empty" wx:if="{{filteredDishes.length === 0}}">
+        <view class="dog-placeholder empty-dog" wx:if="{{!sitDogSrc}}">🐕</view>
+        <image class="empty-dog" src="{{sitDogSrc}}" mode="aspectFit" wx:if="{{sitDogSrc}}"/>
+        <text>这个分类还没有菜品</text>
+        <text class="list-empty-sub">去添加一道她爱吃的吧～</text>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="cart-bar">
+    <view class="cart-icon-wrap">
+      <text class="cart-icon">🛒</text>
+      <text class="cart-badge" wx:if="{{selectedIds.length > 0}}">{{selectedIds.length}}</text>
+    </view>
+    <view class="random-link" bindtap="randomSelect">随机选菜</view>
+    <view class="invite-btn" bindtap="goOrder">邀请下单</view>
+    <view class="submit-btn {{selectedIds.length > 0 ? 'active' : ''}}" bindtap="goOrder">下单</view>
+  </view>
+</view>

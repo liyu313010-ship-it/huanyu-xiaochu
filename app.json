@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/order/order",
+    "pages/random/random",
+    "pages/manage/manage"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FFF8F0",
+    "navigationBarTitleText": "欢雨小厨",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FFF8F0",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#8B6F5E",
+    "selectedColor": "#E8956D",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "菜单" },
+      { "pagePath": "pages/order/order", "text": "今日点菜" },
+      { "pagePath": "pages/random/random", "text": "随机选菜" }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

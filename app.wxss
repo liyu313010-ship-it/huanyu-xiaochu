@@ -1,0 +1,48 @@
+page {
+  background-color: #FFF8F0;
+  font-family: -apple-system, 'PingFang SC', 'Helvetica Neue', sans-serif;
+  color: #3D2B1F;
+  box-sizing: border-box;
+}
+.page-container {
+  min-height: 100vh;
+  background: #FFF8F0;
+  padding-bottom: 160rpx;
+}
+.card {
+  background: #FFFFFF;
+  border-radius: 24rpx;
+  padding: 28rpx;
+  box-shadow: 0 4rpx 20rpx rgba(61,43,31,0.08);
+  margin-bottom: 20rpx;
+}
+.btn-primary {
+  background: #E8956D;
+  color: #FFFFFF;
+  border-radius: 48rpx;
+  padding: 24rpx 0;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+  box-shadow: 0 6rpx 20rpx rgba(232,149,109,0.35);
+  border: none;
+}
+.btn-secondary {
+  background: transparent;
+  color: #8B6F5E;
+  border: 2rpx solid #E0CFC8;
+  border-radius: 48rpx;
+  padding: 20rpx 0;
+  text-align: center;
+  font-size: 28rpx;
+}
+.paw-decoration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32rpx 0;
+  opacity: 0.25;
+}
+.paw-img { width: 40rpx; height: 45rpx; margin-right: 24rpx; }
+.paw-img-last { margin-right: 0; }
+.paw-img-middle { transform: rotate(25deg); margin-top: 16rpx; }

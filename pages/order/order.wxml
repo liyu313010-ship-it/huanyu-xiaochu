@@ -1,0 +1,39 @@
+<view class="page-container">
+  <view class="page-header">
+    <text class="page-title">今日点菜 📋</text>
+    <text class="page-sub">今天想吃的都在这里啦</text>
+  </view>
+
+  <view class="empty-state" wx:if="{{todayOrder.length === 0}}">
+    <!-- [TODO: 线条小狗插画] 今日点菜空状态中央 - 趴姿小狗 -->
+    <view class="dog-placeholder empty-dog" wx:if="{{!layDogSrc}}">🐕</view>
+    <image class="empty-dog" src="{{layDogSrc}}" mode="aspectFit" wx:if="{{layDogSrc}}"/>
+    <text class="empty-title">还没有点菜哦</text>
+    <text class="empty-sub">去菜单里点几道想吃的吧～</text>
+    <view class="go-menu-btn" bindtap="goMenu">去点菜</view>
+  </view>
+
+  <view class="order-list" wx:else>
+    <view class="order-card" wx:for="{{todayOrder}}" wx:key="id">
+      <view class="order-emoji">{{item.emoji}}</view>
+      <view class="order-info">
+        <view class="order-name-row">
+          <text class="order-name">{{item.name}}</text>
+          <view class="order-label" style="background:{{item.labelBg}};color:{{item.labelColor}}">{{item.category}}</view>
+        </view>
+        <text class="order-desc">{{item.desc}}</text>
+      </view>
+      <view class="remove-btn" bindtap="removeDish" data-id="{{item.id}}">×</view>
+    </view>
+    <view class="order-footer">
+      <text class="order-summary">共 {{todayOrder.length}} 道菜，准备开饭！</text>
+      <view class="clear-btn" bindtap="clearOrder">清空今日菜单</view>
+    </view>
+  </view>
+
+  <view class="paw-decoration">
+    <image class="paw-img" src="{{pawSrc}}" wx:if="{{pawSrc}}"/>
+    <image class="paw-img paw-img-middle" src="{{pawSrc}}" wx:if="{{pawSrc}}"/>
+    <image class="paw-img paw-img-last" src="{{pawSrc}}" wx:if="{{pawSrc}}"/>
+  </view>
+</view>
